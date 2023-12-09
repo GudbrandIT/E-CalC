@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-CalC</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Playfair+Display:wght@400;500&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+
+  <body>
+    <div class="maincontainer">
+      <div class="headercontainer">
+        <h3 class="mainheader">
+          <button type="button" class="ecbtn btn-success">
+            <span class="productname"><strong>E-CalC</strong></span>
+          </button>
+          <span class="header">универсальный экономический калькулятор</span>
+        </h3>
+
+        <div class="metalrate">
+          <!-- <iframe
+            scrolling="no"
+            src="https://fortrader.org/informers/getInformer?st=29&cat=10&title=%D0%9C%D0%B5%D1%82%D0%B0%D0%BB%D0%BB%D1%8B&texts=%7B%22toolTitle%22%3A%22%D0%9C%D0%B5%D1%82%D0%B0%D0%BB%D0%BB%22%2C%22bid%22%3A%22%D0%A6%D0%B5%D0%BD%D0%B0%22%7D&mult=0.92&showGetBtn=0&w=300&hideDiff=1&colors=titleTextColor%3D990000%2CtitleBackgroundColor%3Dcccccc%2CsymbolTextColor%3Dffff00%2CtableTextColor%3Dcccccc%2CprofitTextColor%3D1155cc%2CprofitBackgroundColor%3Deaf7e1%2ClossTextColor%3Dff1616%2ClossBackgroundColor%3Df6e1e1%2CborderTdColor%3Db3b1b1%2CtableBorderColor%3Db3b1b1%2CtrBackgroundColor%3Dcc0000%2CdataTextColor%3D454242%2CdataBackgroundColor%3Df1f1f1%2CinformerLinkTextColor%3D454242%2CinformerLinkBackgroundColor%3Df1f1f1&items=48%2C49%2C25459%2C25458&columns="
+          ></iframe> Информер не работает -->
+        </div>
+        <div class="exchangerate">
+          <!-- <iframe
+            scrolling="no"
+            src="https://fortrader.org/informers/getInformer?st=29&cat=7&title=%D0%9A%D1%83%D1%80%D1%81%D1%8B%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%20%D0%A6%D0%91%20%D0%A0%D0%A4&texts=%7B%22toolTitle%22%3A%22%D0%92%D0%B0%D0%BB%D1%8E%D1%82%D0%B0%22%2C%22todayCourse%22%3A%22RUB%22%7D&mult=0.85&showGetBtn=0&hideHeader=0&hideDate=0&w=300&codes=1&colors=titleTextColor%3Ddddddd%2CtitleBackgroundColor%3D990000%2CsymbolTextColor%3D444%2CtableTextColor%3D444%2CprofitTextColor%3D1c4587%2CprofitBackgroundColor%3Deaf7e1%2ClossTextColor%3Dff1616%2ClossBackgroundColor%3Df6e1e1%2CborderTdColor%3Db3b1b1%2CtableBorderColor%3Db3b1b1%2CtrBackgroundColor%3Df1f1f1%2CdataTextColor%3D454242%2CdataBackgroundColor%3Df1f1f1%2CinformerLinkTextColor%3D454242%2CinformerLinkBackgroundColor%3Df1f1f1&items=2%2C21&columns=&toCur=11111"
+          ></iframe> Информер не работает -->
+        </div>
+        <div class="currenttime"></div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link fs-5 fw-bolder" href="index.html"
+                ><span id="nm">Главная страница</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-bolder" href="#"
+                ><span id="n1">Формулы</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-bolder" href="#"
+                ><span id="n2">Для бизнеса</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-bolder" href="#"
+                ><span id="n3">Инвестиции</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-bolder" href="#"
+                ><span id="n4">Бухгалтерия</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-bolder" href="#"
+                ><span id="n5">Анализ предприятия</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="menu">
+        <!-- <div class="btn-group" role="group" aria-label="Basic example">
+          <nav class="nav flex-column">
+            <button type="button" class="btn btn-secondary">
+              <a class="nav-link text-danger fs-5 fw-bolder" href="#"></a>
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a class="nav-link text-danger fs-5 fw-bolder" href="#"></a>
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a class="nav-link text-danger fs-5 fw-bolder" href="#"></a>
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a class="nav-link text-danger fs-5 fw-bolder" href="#"></a>
+            </button>
+            <button type="button" class="btn btn-secondary">
+              <a class="nav-link text-danger fs-5 fw-bolder" href="#"></a>
+            </button>
+          </nav> -->
+      </div>
+
+      <div class="operationstable">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Поиск по сайту"
+          type="text"
+        />
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
